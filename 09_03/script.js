@@ -5,6 +5,30 @@
  */
 import backpackObjectArray from "./components/data.js";
 
+const toggleLid = function () {
+  // find((element) => conditions)
+  // {} to destructure array
+  let backpackObject = backpackObjectArray.find(
+    ({ id }) => id === this.parentElement.id
+  );
+
+  backpackObject.lidOpen == true
+    ? (backpackObject.lidOpen = false)
+    : (backpackObject.lidOpen = true);
+
+  this.innerText == "Close lid"
+    ? (this.innerText = "Open lid")
+    : (this.innerText = "Close lid");
+
+  const backpackLid = this.parentElement.querySelector(".backpack__lid span");
+
+  backpackLid.innerText == "open"
+    ? (backpackLid.innerText = "closed")
+    : (backpackLid.innerText = "open");
+};
+
+// each button needs to have a separate event listener added
+
 const backpackList = backpackObjectArray.map((backpack) => {
   let backpackArticle = document.createElement("article");
   backpackArticle.classList.add("backpack");
@@ -38,6 +62,10 @@ const backpackList = backpackObjectArray.map((backpack) => {
     </ul>
     <button class="lid-toggle">Open lid</button>
   `;
+
+  const button = backpackArticle.querySelector(".lid-toggle");
+
+  button.addEventListener("click", toggleLid);
 
   return backpackArticle;
 });

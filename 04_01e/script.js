@@ -16,6 +16,8 @@ const everydayPack = new Backpack(
   "December 5, 2018 15:00:00 PST"
 );
 
+// back ticks tell the browser that anything within it is a template literal, meaning we can mix HTML and strings with JS elements
+// $ used to indicate using JS
 const content = `
   <main>
     <article>
@@ -33,6 +35,7 @@ const content = `
   </main>
 `;
 
+// within the body element insert the above
 document.body.innerHTML = content;
 
 console.log("The everydayPack object:", everydayPack);

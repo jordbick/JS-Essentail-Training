@@ -8,8 +8,10 @@ import backpackObjectArray from "./components/data.js";
 /**
  * Add event listener to the lid-toggle button.
  */
+// needs to be a function object rather than an arrow function to use this. argument
 const lidToggle = function () {
   // Find the current backpack object in backpackObjectArray
+  // See if the id of the object matches the id of the parent element of the button we just pressed
   let backpackObject = backpackObjectArray.find(
     ({ id }) => id === this.parentElement.id
   );
@@ -68,6 +70,7 @@ const backpackList = backpackObjectArray.map((backpack) => {
   let button = backpackArticle.querySelector(".lid-toggle");
 
   // Add event listener
+  // callback function so no () needed. We care calling the function back into the event listener and then running it in the event listener
   button.addEventListener("click", lidToggle);
 
   return backpackArticle;

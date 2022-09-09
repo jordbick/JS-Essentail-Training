@@ -12,6 +12,7 @@ const backpack = {
     right: 26,
   },
   lidOpen: false,
+  // toggleLid function receives one parameter, this parameter sets this object lidOpen
   toggleLid: function (lidStatus) {
     this.lidOpen = lidStatus;
   },
@@ -23,6 +24,12 @@ const backpack = {
 
 console.log("The backpack object:", backpack);
 console.log("The pocketNum value:", backpack.pocketNum);
+
+// bracket notation
+// gives us more control that dot notation
+// Can use a variable witb bracket notation or properties with non-standard names
+var query = "pocketNum";
+console.log("The pocketNum value:", backpack[query]);
 
 console.log("Left before:", backpack.strapLength.left);
 

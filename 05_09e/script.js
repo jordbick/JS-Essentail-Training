@@ -50,9 +50,24 @@ const content = `
 
 const main = document.querySelector(".maincontent");
 
+// create element article
 const newArticle = document.createElement("article");
+// set class of article as backpack
 newArticle.classList.add("backpack");
+// attribute id has value everyday
 newArticle.setAttribute("id", "everyday");
+// within the article is content created above (template literal)
 newArticle.innerHTML = content;
 
+// append to main as last child
 main.append(newArticle);
+// prepend adds as first child
+
+// appendChild - move an element from one location to another inside the DOM or need the browser to return the appended object to be further worked with
+
+// replaceChild
+
+// insertBefore - inserts before a parent node
+
+//insertAdjacentElement(position, element):
+// position - beforebegin, afterbegin, beforeend, afterend

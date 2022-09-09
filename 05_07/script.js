@@ -50,4 +50,7 @@ const content = `
   </article>
 `;
 
+// set the inline CSS styles
+document.querySelector(".site-title").style.color = "red";
+
 main.innerHTML = content;

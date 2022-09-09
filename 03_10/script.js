@@ -4,6 +4,7 @@
  */
 import Backpack from "./Backpack.js";
 
+// creating new backpack object
 const everydayPack = new Backpack(
   "Everyday Backpack",
   30,

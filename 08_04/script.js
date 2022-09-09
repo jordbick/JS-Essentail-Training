@@ -10,6 +10,8 @@ const greenPack = {
   pocketNum: 3,
 };
 
+// Arrow function
+// remove word function and place arrow between argument and opening body bracket
 const addPack = (currentPack) => {
   const newArticle = document.createElement("article");
   newArticle.innerHTML = `

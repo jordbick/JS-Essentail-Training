@@ -6,8 +6,9 @@
  * List of ISO language codes:
  * @link http://www.lingoes.net/en/translator/langcode.htm
  */
-
+// default values
 const formatter = (locale = "en-US", currency = "USD", value) => {
+  // Intl.NumberFormat is a constructor for objects that enable language sensitive number formatting
   let formattedValue = new Intl.NumberFormat(locale, {
     style: "currency",
     currency: currency,

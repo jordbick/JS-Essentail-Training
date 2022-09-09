@@ -22,4 +22,5 @@ const backpack = {
 };
 
 console.log("The backpack object:", backpack);
+// dot notation to access properties within object
 console.log("The pocketNum value:", backpack.pocketNum);

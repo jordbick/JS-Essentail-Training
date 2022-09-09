@@ -13,12 +13,22 @@ const greenPack = {
   volume: 8,
   pocketNum: 3,
   newVolume: function (volume) {
+    // returns 8
     console.log("this.volume in the method:", this.volume);
     this.volume = volume;
+    // returns 5
     console.log("this.volume after update:", this.volume);
-    // (function () {
-    //   console.log("this.volume in nested function:", this.volume);
-    // })();
+    // nested function which takes the volume from the entire DOM
+    // function is hoisted to global scope
+    // returns 20
+    (function () {
+      console.log("this.volume in nested function:", this.volume);
+    })();
+    // this arrow function stays within the local scope
+    // returns 5 as the most recent declaration of volume
+    (() => {
+      console.log("this.volume in nested function:", this.volume);
+    })();
   },
 };
 

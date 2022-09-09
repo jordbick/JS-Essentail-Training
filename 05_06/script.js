@@ -50,4 +50,15 @@ const content = `
   </article>
 `;
 
+// returns the attributes associated with the element (src and alt)
+document.querySelector("img").attributes;
+// returns true or false
+document.querySelector("img").hasAttribute("src");
+// returns value assigned to that attribute
+document.querySelector("img").getAttribute("src");
+// appends value to attribute or creates new attribute
+document.querySelector("img").setAttribute("alt", "Drawing of backpack");
+document.querySelector("img").setAttribute("title", "This shouldn't be here");
+document.querySelector("img").removeAttribute("title", "This shouldn't be here");
+
 main.innerHTML = content;

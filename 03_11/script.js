@@ -3,6 +3,8 @@
  * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new
  */
 
+// object constructor with capital
+// Class are preferred however to this - the object constructor function
 function Backpack(
   name,
   volume,
@@ -21,6 +23,7 @@ function Backpack(
     right: strapLengthR,
   };
   this.lidOpen = lidOpen;
+  // methods live inside main constructor function, like properties
   this.toggleLid = function (lidStatus) {
     this.lidOpen = lidStatus;
   };

@@ -48,8 +48,9 @@ const tipCalculator = (sum, percentage, locale, currency, printHTML) => {
     tip: formatter(locale, currency, tip),
     total: formatter(locale, currency, total),
   };
-
+  // call in this function so that the function executes when tipCalculator has finished running
   printHTML(finalTip);
 };
 
+// passing the printHTML whole function (not executing the function) so that it can be used by the tipCalculator
 tipCalculator(29.95, 18, "de-DE", "EUR", printHTML);

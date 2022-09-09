@@ -16,6 +16,7 @@ const everydayPack = new Backpack(
   "December 5, 2018 15:00:00 PST"
 );
 
+// strings instead of template literals (not using back ticks and instead using string concatination)
 const content = "<h1>" + everydayPack.name + "</h1>";
 
 document.body.innerHTML = content;

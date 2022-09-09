@@ -18,7 +18,17 @@ const everydayPack = new Backpack(
   "../assets/images/everyday.svg"
 );
 
+// . to get class name
+// querySelector return the first element that matches the query
 const main = document.querySelector(".maincontent");
+
+// will return the last instance of li in the main section of the HTML document
+document.querySelector("main li:last-child");
+
+// querySelectorAll - returns a node list of all the items returns
+document
+  .querySelectorAll("main li")
+  .forEach((item) => (item.style.backgroundColor = "red"));
 
 const content = `
   <article class="backpack" id="everyday">

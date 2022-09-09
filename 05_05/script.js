@@ -50,4 +50,14 @@ const content = `
   </article>
 `;
 
+// returns as a list the classes associated with this element
+document.querySelector("main li:first-child").classList;
+// has lots of functions associated with it
+document.querySelector("main li:first-child").classList.add("new-class");
+document.querySelector("main li:first-child").classList.remove("new-class");
+document.querySelector("main li:first-child").classList.toggle("new-class");
+document
+  .querySelector("main li:first-child")
+  .classList.replace("packprop", "new-class");
+
 main.innerHTML = content;
